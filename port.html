@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavadharini Portfolio</title>
+    <link rel="stylesheet" href="port.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#home" class="logo">Bhavadharini's Portfolio</a>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+        <nav class="navbar" id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+
+            <a href="#blog">Blogs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>   
+    
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Explore My Creative & Technical Journey!!!</h3>
+            <div class="home-image">
+                <img src="photo_official.jpg" alt="Home Image">
+            </div>
+            <p>I'm Bhavadharini, a passionate software developer. I enjoy building impactful tech solutions that blend innovation with real world problem solving.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-content">
+            <h3>About Me</h3>
+            <p>Hi, I'm Bhavadharini — a passionate developer and data enthusiast. I specialize in crafting dynamic web applications using technologies like HTML, CSS, JavaScript, and React.js. With a solid foundation in Python and libraries like Pandas, NumPy, and scikit-learn, I also dive deep into data science, making sense of complex data and deriving valuable insights.
+
+                I’m experienced with creating insightful visualizations using tools like Power BI and developing robust applications with Java and Spring Boot. When it comes to databases, I’m comfortable working with MySQL to store and manage data efficiently.
+                
+                Alongside my technical skills, I enjoy exploring the potential of AI tools like ChatGPT and Claude to enhance my projects and workflows.
+                
+                I’m always eager to learn new technologies, solve real-world problems, and collaborate on innovative solutions. Welcome to my portfolio — let’s create something amazing together!</p>
+            <h3>Education</h3>
+            <ul>
+                <li>VSB Engineering college - B.E in Computer Science and Engineering (2022 - 2026)</li>
+                <li>Bharani Vidhyalaya sr.sec school - HSC (2021 - 2022)</li>
+            </ul>
+        </div>
+        
+    </section>
+    <section class="skills" id="skills">
+        <div class="skills-content">
+            <h3>My Skills</h3>
+            <table class="skills-table">
+                <tr>
+                    <th>Category</th>
+                    <th>Skills/Tools</th>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>HTML, CSS, JavaScript, React.js</td>
+                </tr>
+                <tr>
+                    <td>Data Science</td>
+                    <td>Python, Pandas, NumPy, Matplotlib, Streamlit, scikit-learn</td>
+                </tr>
+                <tr>
+                    <td>Visualization</td>
+                    <td>Power BI</td>
+                </tr>
+                <tr>
+                    <td>Programming</td>
+                    <td>Java, Spring Boot</td>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td>MySQL</td>
+                </tr>
+                <tr>
+                    <td>AI tools</td>
+                    <td>Chatgpt,Claude</td>
+                </tr>
+            </table>
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="projects-content">
+          <h3>My Projects</h3>
+          <table class="projects-table">
+            <tr>
+              <th>Project Name</th>
+              <th>Tech Stack</th>
+              <th>GitHub</th>
+            </tr>
+            <tr>
+              <td>Restaurant Website</td>
+              <td>HTML, CSS, JavaScript</td>
+              <td><a href="https://github.com/bhava2206/restaurant_website" target="_blank" class="github-btn">View</a></td>
+            </tr>
+            <tr>
+              <td>Hospital Management Website</td>
+              <td>Java, Spring Boot, Thymeleaf, MySQL</td>
+              <td><a href="https://github.com/yourusername/project2" target="_blank" class="github-btn">View</a></td>
+            </tr>
+            <tr>
+              <td>Flappy Bird AI</td>
+              <td>Python, NEAT, Pygame</td>
+              <td><a href="https://github.com/yourusername/project3" target="_blank" class="github-btn">View</a></td>
+            </tr>
+            <tr>
+              <td>Sales Dashboard & Customer Segmentation</td>
+              <td>Power BI, Python</td>
+              <td><a href="https://github.com/yourusername/project4" target="_blank" class="github-btn">View</a></td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      
+    <section class="certificates" id="certificates">
+         <div class="certificates-content">
+          <h3>My Certificates</h3>
+          <table class="certificates-table">
+              <tr>
+               <th>Certificate Name</th>
+               <th>Issuing Organization</th>
+              </tr>
+              <tr>
+               <td>Java Certification</td>
+               <td>NPTEL</td>
+              </tr>
+              <tr>
+               <td>Java Springboard Certification</td>
+               <td>Infosys Springboard</td>
+              </tr>
+              <tr>
+               <td>Machine Learning Certification</td>
+               <td>Infosys Springboard</td>
+              </tr>
+              <tr>
+               <td>Full Stack Certification</td>
+               <td>Infosys Springboard</td>
+              </tr>
+          </table>
+         </div>    
+    </section>
+    <section class="blog" id="blog">
+        <h3>Blog</h3>
+    
+        <div class="blog-entry" id="blog-smart-india-hackathon">
+            <img src="maxresdefault.jpg" alt="Smart India Hackathon" class="blog-image">
+            <h4>Smart India Hackathon</h4>
+            <p>I had the opportunity to participate in the prestigious Smart India Hackathon, where our team collaboratively proposed and built a Geolocation-based Attendance Tracking App aimed at streamlining employee attendance processes across multiple office locations.
+
+                The application was designed with practical, user-centric features such as:
+                
+                Geolocation-based check-in/check-out
+                
+                Offline access to mark attendance in areas with poor connectivity
+                
+                Multilingual support to cater to diverse users
+                
+                Integration with Google Maps API for accurate location tracking
+                
+                Real-time data synchronization with a cloud database
+                
+                This hackathon was a remarkable team effort, allowing us to collaboratively brainstorm, design, and develop the solution within a limited time frame. Through this, I gained extensive hands-on experience in:
+                
+                Flutter for building a cross-platform mobile app
+                
+                MongoDB Atlas for managing cloud-based, scalable data storage
+                
+                Google Maps & GPS services for location tracking
+                
+                Git and GitHub for version control and effective collaboration
+                
+                The event not only sharpened my technical skills but also helped enhance my teamwork, problem-solving, and agile development practices. It was a valuable learning experience in working under deadlines, efficiently distributing tasks, and collectively overcoming challenges.</p>
+        </div>
+    
+        <div class="blog-entry" id="blog-rajya-puraskar">
+            <img src="download.png" alt="Rajya Puraskar" class="blog-image">
+            <h4>Rajya Puraskar - Scouts and Guides</h4>
+            <p>Achieving the Rajya Puraskar, one of the highest state-level honors in Scouts and Guides, marked a significant milestone in my personal growth journey. Through this experience, I actively participated in state-level camps, service activities, and rigorous evaluations, which strengthened my:
+
+                Leadership skills by leading teams in various outdoor tasks and social initiatives
+                
+                Teamwork and collaboration during group challenges and community service projects
+                
+                Sense of social responsibility through volunteering and public service activities
+                
+                This experience taught me to adapt, communicate effectively, and lead with empathy — lessons that continue to guide me in both personal and professional settings.</p>
+        </div>
+    
+        <div class="blog-entry" id="blog-java-springboard">
+            <img src="1723796476978.png" alt="Java Springboard" class="blog-image">
+            <h4>Java SpringBoard - Pragathi: Path to Future</h4>
+            <p>As part of the Infosys Springboard initiative, I had the opportunity to enhance my skills in Java programming, Spring Boot framework, and full-stack development through a series of hands-on projects, coding exercises, and interactive learning modules. This program provided an in-depth understanding of building scalable web applications using Java 17, Spring Boot RESTful services, MySQL, and front-end integration tools.
+
+                Alongside full-stack development, I also explored the exciting domain of Artificial Intelligence (AI) and Machine Learning (ML) using Python. The AI/ML modules covered key concepts such as:
+                
+                Supervised and Unsupervised Learning
+                
+                Data Preprocessing and Cleaning
+                
+                Model Building and Evaluation Techniques
+                
+                Libraries like Pandas, NumPy, Matplotlib, and scikit-learn
+                
+                Basic implementations of algorithms like Linear Regression, Decision Trees, and K-Means Clustering
+                
+                Through practical assignments and projects, I gained valuable experience in applying AI/ML techniques to real-world datasets, performing predictive analysis, data visualization, and model optimization.
+                
+                This dual exposure to full-stack application development and AI/ML fundamentals has equipped me with a versatile technical skill set, enhancing both my backend development capabilities and data-driven problem-solving approach. The program also emphasized professional development skills such as project management, version control with Git/GitHub, agile methodologies, and effective team collaboration in a simulated professional environment.</p>
+        </div>
+    
+        <div class="blog-entry" id="blog-infosys-internship">
+            <img src="download (2).jpg" alt="Infosys Internship" class="blog-image">
+            <h4>Infosys Springboard Internship</h4>
+            <p>As a Springboard Intern, I gained valuable exposure to real-world software development practices through a structured Java Stack Development program. The internship allowed me to deepen my understanding of Java programming, Spring Boot framework, REST APIs, and MySQL database management. I also got hands-on experience with collaborative development tools like Git and GitHub, enhancing my ability to work efficiently in team-based projects.
+
+                One of the highlights of my internship was developing a Hospital Management Application named "Care and Cure App". This project provided a comprehensive, practical learning experience in:
+                
+                Back-end logic development using Java and Spring Boot
+                
+                Database design and management with MySQL
+                
+                Front-end integration techniques for seamless user interaction
+                
+                Version control and team collaboration using GitHub
+                
+                Working alongside students from different states helped me enhance my communication, teamwork, and cross-functional collaboration skills. Within the project, I specifically handled the Doctor Module, where I implemented functionalities such as:
+                
+                Doctor registration and profile management
+                
+                Appointment scheduling and patient records
+                
+                Availability management and slot booking
+                
+                This hands-on project not only improved my problem-solving skills but also gave me real-time exposure to the end-to-end software development lifecycle, from database schema creation to API development and front-end integration.
+                
+                The internship experience broadened my technical capabilities and taught me the importance of teamwork, agile development, and attention to detail in delivering quality software solutions.</p>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h3>Contact Me</h3>
+            <form action="https://script.google.com/macros/s/AKfycby15DABHLYYRryPjyNxZnx-lchVOAT3p_8gW0bi8J-9GLEpDHg9KxpjNGTtx9qkNso78w/exec" method="POST" name="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            </form>
+            <div class="contact-links">
+            <h4>Connect with me:</h4>
+            <a href="https://wa.me/8973306673" target="_blank" class="contact-link">
+                <i class='bx bxl-whatsapp'></i> WhatsApp
+            </a>
+            <a href="https://www.linkedin.com/in/bhavadharini-m-6391a1280/" target="_blank" class="contact-link">
+                <i class='bx bxl-linkedin'></i> LinkedIn
+            </a>
+            <a href="mailto:bhavadharinim2500@gmail.com" class="contact-link">
+                <i class='bx bx-envelope'></i> Email
+            </a>
+            </div>
+        </div>
+        <div class="cv-download"></div>
+            <a href="BHAVADHARINI M_VSBEC (1).pdf" download class="btn">Download CV</a>
+        </div>
+    </section>    
+    
+
+    <script>
+        function toggleMenu() {
+          var navbar = document.getElementById("navbar");
+          navbar.classList.toggle("active");
+        }
+        
+      </script>
+      
+      <script>
+       window.onload = () => {
+  let i = 0;
+  const txt = 'Explore My Creative & Technical Journey!!!';
+  const speed = 100;
+  const h3 = document.querySelector('.home-content h3');
+  
+  h3.innerHTML = ''; // clear existing text before typing
+  
+  function typeWriter() {
+    if (i < txt.length) {
+      h3.innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+  typeWriter();
+};
+
+
+      </script>
+      <script>
+        const scriptUrl = 'https://script.google.com/macros/s/AKfycby15DABHLYYRryPjyNxZnx-lchVOAT3p_8gW0bi8J-9GLEpDHg9KxpjNGTtx9qkNso78w/exec';
+        const form = document.forms['contact-form'];
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          fetch(scriptUrl, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+              if (response.ok) {
+                alert("Message sent successfully!");
+                form.reset();
+              } else {
+                alert("Failed to send message. Please try again.");
+              }
+            })
+            .catch(error => {
+              console.error('Error!', error.message);
+              alert("An error occurred. Please check your internet connection or try again later.");
+            });
+        });
+      </script>
+      
+      
+      
+</body>
+</html>
