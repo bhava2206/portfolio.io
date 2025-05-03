@@ -122,42 +122,52 @@
       </section>
       <section class="leetcode-slider" id="leetcode">
         <h1>Coding Profiles</h1>
+        <br><br>
         <div class="slider-container">
             <div class="slider">
                 <div class="slide-card">
                     <h4>LeetCode</h4>
                     <a href="https://leetcode.com/u/Bhavadharinim/" target="_blank">View Profile</a>
+                    <p>Solved 100+ problems</p>
                 </div>
                 <div class="slide-card">
                     <h4>GeeksForGeeks</h4>
                     <a href="https://www.geeksforgeeks.org/user/bhavadharj759/" target="_blank">View Profile</a>
+                    <p>solved 50+ problems</p>
                 </div>
                 <div class="slide-card">
                     <h4>GitHub</h4>
                     <a href="https://github.com/" target="_blank">View Profile</a>
+                    <p>Contributed to various projects</p>
                 </div>
                 <div class="slide-card">
                   <h4>HackerRank</h4>
                   <a href="https://www.hackerrank.com/profile/bhavadharinim251" target="_blank">View Profile</a>
+                  <p>solved 50+ problems</p>
               </div>
                 <!-- Add more cards as needed -->
                 <div class="slide-card">
                     <h4>LeetCode</h4>
                     <a href="https://leetcode.com/u/Bhavadharinim/" target="_blank">View Profile</a>
+                    <p>Solved 100+ problems</p>
                 </div>
                 <div class="slide-card">
                     <h4>GeeksForGeeks</h4>
                     <a href="https://www.geeksforgeeks.org/user/bhavadharj759/" target="_blank">View Profile</a>
+                    <p>solved 50+ problems</p>
                 </div>
                 <div class="slide-card">
                     <h4>GitHub</h4>
                     <a href="https://github.com/" target="_blank">View Profile</a>
+                    <p>Contributed to various projects</p>
                 </div>
                 <div class="slide-card">
                   <h4>HackerRank</h4>
                   <a href="https://www.hackerrank.com/profile/bhavadharinim251" target="_blank">View Profile</a>
+                  <p>solved 50+ problems</p>
               </div>
             </div>
+            
         </div>
     </section>
     
@@ -369,27 +379,68 @@
         });
         
     </script>
-    <script>
-      let currentIndex = 0;
-      const slider = document.querySelector('.slider');
-      const cards = document.querySelectorAll('.slide-card');
-      const totalCards = cards.length;
-    
-      function moveSlider() {
-          // Calculate the width of each card
-          const cardWidth = cards[0].offsetWidth + 20; // 20px for margin
-    
-          // Move the slider to the next card
-          currentIndex++;
-          if (currentIndex >= totalCards) {
-              currentIndex = 0; // Reset to first card
-          }
-    
-          slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+   
+   <script>
+    let currentIndex = 0;
+    const slider = document.querySelector('.slider');
+    const cards = document.querySelectorAll('.slide-card');
+    const totalCards = cards.length;
+  
+    function moveSlider(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+  
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalCards;
+      moveSlider(currentIndex);
+    }
+  
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+  
+    // Drag functionality
+    let startX = 0;
+    let isDragging = false;
+    let dragThreshold = 50;
+  
+    const container = document.querySelector('.slider-container');
+  
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.pageX;
+      clearInterval(autoSlideInterval);
+    });
+  
+    container.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      const diff = e.pageX - startX;
+      if (diff > dragThreshold && currentIndex > 0) {
+        currentIndex--;
+      } else if (diff < -dragThreshold && currentIndex < totalCards - 1) {
+        currentIndex++;
       }
-    
-      setInterval(moveSlider, 3000); // Move every 3 seconds
-    </script>
+      moveSlider(currentIndex);
+      isDragging = false;
+      autoSlideInterval = setInterval(autoSlide, 3000);
+    });
+  
+    container.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      clearInterval(autoSlideInterval);
+    });
+  
+    container.addEventListener('touchend', (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      if (diff > dragThreshold && currentIndex > 0) {
+        currentIndex--;
+      } else if (diff < -dragThreshold && currentIndex < totalCards - 1) {
+        currentIndex++;
+      }
+      moveSlider(currentIndex);
+      autoSlideInterval = setInterval(autoSlide, 3000);
+    });
+  </script>
+  
     
 
       
